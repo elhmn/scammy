@@ -13,9 +13,9 @@ def gen_names():
     with open("./names.txt", "r") as f:
         names = f.read().split("\n")
         for n in names:
-            name = n.split("\t")
+            name = n.split(" ")
             for n2 in name:
-                if not n2.isdigit() and len(n2) > 1:
+                if len(n2) > 1:
                     final_names.append(n2)
     return final_names
 
